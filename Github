@@ -1,0 +1,114 @@
+🔹 1. Basic Linux / Git Bash Commands
+
+(Used in Git Bash terminal)
+
+pwd              # Show current directory
+ls               # List files
+ls -a            # Show hidden files
+cd folder_name   # Go to folder
+cd ..            # Go back
+clear            # Clear terminal
+mkdir folder     # Create folder
+touch file.txt   # Create file
+rm file.txt      # Delete file
+rm -r folder     # Delete folder
+
+🔹 2. Git Configuration (One Time Setup)
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+git config --list   # Check config
+
+🔹 3. Create & Initialize Repository
+git init                 # Initialize new repo
+git status               # Check status
+git clone repo_url       # Clone repository
+
+🔹 4. Staging & Commit Commands
+git add file.txt         # Add single file
+git add .                # Add all files
+git commit -m "message"  # Commit changes
+
+
+📌 Shortcut:
+
+git commit -am "message"  # add + commit (tracked files only)
+
+🔹 5. Check Changes & History
+git diff                # Show unstaged changes
+git diff --staged       # Show staged changes
+
+git log                 # Commit history
+git log --oneline       # Short history
+git show commit_id      # Show commit details
+
+🔹 6. Branch Commands 🌿
+git branch               # List branches
+git branch branch_name   # Create branch
+git checkout branch_name # Switch branch
+
+git checkout -b newBranch  # Create + switch
+
+
+Delete branch:
+
+git branch -d branch_name
+
+🔹 7. Merge & Rebase
+git merge branch_name    # Merge branch
+git rebase branch_name   # Rebase branch
+
+🔹 8. Remote Repository (GitHub)
+git remote -v                 # Check remote
+git remote add origin URL     # Add remote
+git push origin main          # Push code
+git pull origin main          # Pull code
+git fetch                     # Fetch updates
+
+
+Force push (⚠️ dangerous):
+
+git push -f origin main
+
+🔹 9. Undo & Fix Mistakes 😬
+Undo staging
+git reset file.txt
+
+Undo commit (keep changes)
+git reset --soft HEAD~1
+
+Undo commit (remove changes)
+git reset --hard HEAD~1
+
+Discard local changes
+git checkout -- file.txt
+
+🔹 10. Stash Commands 📦
+git stash           # Save work temporarily
+git stash list      # Show stash
+git stash apply     # Apply stash
+git stash drop      # Delete stash
+
+🔹 11. Tag Commands 🔖
+git tag v1.0
+git tag
+git push origin v1.0
+
+🔹 12. Cherry Pick 🍒
+git cherry-pick commit_id
+
+🔹 13. .gitignore File
+
+Create .gitignore file:
+
+node_modules/
+.env
+*.log
+
+🔹 14. Git Workflow (Real Project)
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin URL
+git push -u origin main
